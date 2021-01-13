@@ -3,17 +3,18 @@
 
 import cv2
 import numpy as np
-from skimage import util
-from chapter4 import threeTypicalFilter
-import chapter4
-from  chapter4 import twoDFourierTransform
 
 
-def degradationFunction(u, v, M, N, k=0.0025):
-    # （大气湍流模型）
+# （大气湍流模型）
+def atmosphericDegradationFunction(u, v, M, N, k=0.0025):
     return np.exp(-k * (((u - M / 2) ** 2 + (v - N / 2) ** 2) ** (5 / 6)))
-    # return np.exp(-k * ((u ** 2 + v ** 2) ** (5 / 6)))
-
+# （运动模糊模型）
+def motionBlurDegradationFunction(u, v,a=0.1, b=0.1,T=1):
+    r = (u*a + v*b) * np.pi
+    if r == 0 :
+        return T
+    else:
+        return T / r * np.sin(r) * np.exp(-1.j * r)
 
 def dft(img):
     f = np.fft.fft2(img)
@@ -26,58 +27,50 @@ def idft(ishift):
     return img
 
 
-
 # 图像退化
-def degradationImage(img):
+def degradationImage(img , op ="atmospheric"):
     img = dft(img)
-    # img2 = (np.abs(img) / np.abs(img).max() * 255).astype(np.uint8)
-    # img2 = chapter4.twoDFourierTransform.img_trans_log(img2)
-    # cv2.imshow("1",img2)
     height, width = img.shape
     result = np.copy(img)
-    for i in range(height):
-        for j in range(width):
-            # print(degradationFunction(i, j, height, width))
-            result[i, j] = img[i, j] * degradationFunction(i, j, height, width)
-    # result2 = (np.abs(result) / np.abs(result).max() * 255).astype(np.uint8)
-    # result2 = chapter4.twoDFourierTransform.img_trans_log(result2)
-    # cv2.imshow("2", result2)
+    for u in range(height):
+        for v in range(width):
+            # 选择退化函数
+            if op == "atmospheric" :
+                result[u, v] = img[u, v] * atmosphericDegradationFunction(u, v, height, width)
+            elif op == "motionBlur":
+                result[u, v] = img[u, v] * motionBlurDegradationFunction(u, v)
     result = idft(result)
-    noise = np.zeros(img.shape,np.uint8)
+    # 高斯噪声
     noise = np.random.normal(0., 1,img.shape)
-    noise = (np.abs(noise) / np.abs(noise).max() * 255).astype(np.uint8)
-    return result
+    return result+noise
 
 
-# //图像复原
+# //全逆滤波图像复原
 def InverseFilterImageRestoration(img):
     img = dft(img)
     height, width = img.shape
     result = np.copy(img)
-    for i in range(height):
-        for j in range(width):
-            result[i, j] = img[i, j] / degradationFunction(i, j, height, width)
+    for u in range(height):
+        for v in range(width):
+            result[u, v] = img[u, v] / atmosphericDegradationFunction(u, v, height, width)
     result = idft(result)
-    # result = (np.abs(result) / np.abs(result).max() * 255).astype(np.uint8)
-    result2 = chapter4.threeTypicalFilter.ButterworthFilterSmooth(result,D0=20,n=10)
-    print(result,result2)
     return result
-# //图像复原半径受限D0
-def xianzhiInverseFilterImageRestoration(img,D0=40,n=10):
+
+# //半径（D0）受限逆滤波图像复原
+def xianzhiInverseFilterImageRestoration(img,D0=70,n=10):
     # result = chapter4.threeTypicalFilter.ButterworthFilterSmooth(img, D0, n=10)
     img = dft(img)
     height, width = img.shape
     result = np.copy(img)
-    for i in range(height-1):
-        for j in range(width-1):
-            result[i, j] = img[i,j] * (1 / (1 + pow(((i - height) ** 2 + (j - width) ** 2) ** 0.5 / D0, 2*n)))
-            # result[i, j] = result[i, j] / degradationFunction(i, j, height, width)
+    for u in range(height-1):
+        for v in range(width-1):
+            #逆滤波后乘上一个布特沃斯低通函数
+            result[u, v] = img[u,v] / atmosphericDegradationFunction(u, v, height, width) * (1 / (1 + pow(((u - height/2) ** 2 + (v - width/2) ** 2) ** 0.5 / D0, 2*n)))
     result = idft(result)
-    # result = (np.abs(result) / np.abs(result).max() * 255).astype(np.uint8)
-    # print(result,result2)
     return result
 
 
+# 转灰度图像
 def rgbtransgray(img):
     height, width, channels = img.shape
     img_gray = np.zeros((height, width))
@@ -88,17 +81,9 @@ def rgbtransgray(img):
     return img_gray
 
 
-def addnoisefreq(img):
-    height, width = img.shape
-    noisefreq = np.zeros((img.shape))
-    noisefreq = np.fft.ifft2(noisefreq)
-    for i in range(height):
-        for j in range(width):
-            noisefreq += img[i, j]
-    return noisefreq
 
 
-image = cv2.imread('../images/csu.jpg')
+image = cv2.imread('../images/hangpai.jpg')
 imgy = rgbtransgray(image)  # 转化为灰度图
 imgy = (np.abs(imgy) / np.abs(imgy).max() * 255).astype(np.uint8)
 cv2.imshow("image", imgy)
@@ -109,25 +94,21 @@ cv2.imshow("degraimage",degraimage1)
 restorationimg = InverseFilterImageRestoration(degraimage)
 restorationimg = (np.abs(restorationimg) / np.abs(restorationimg).max() * 255).astype(np.uint8)
 cv2.imshow("restorationimg", restorationimg)
+# result1 = xianzhiInverseFilterImageRestoration(degraimage,20)
+# result1 = (np.abs(result1) / np.abs(result1).max() * 255).astype(np.uint8)
+# cv2.imshow("r=20", result1)
 result2 = xianzhiInverseFilterImageRestoration(degraimage,40)
 result2 = (np.abs(result2) / np.abs(result2).max() * 255).astype(np.uint8)
-cv2.imshow("result2", result2)
+cv2.imshow("r=40", result2)
+result3 = xianzhiInverseFilterImageRestoration(degraimage,70)
+result3 = (np.abs(result3) / np.abs(result3).max() * 255).astype(np.uint8)
+cv2.imshow("r=70", result3)
+result4 = xianzhiInverseFilterImageRestoration(degraimage,85)
+result4 = (np.abs(result4) / np.abs(result4).max() * 255).astype(np.uint8)
+cv2.imshow("r=85", result2)
+# result5 = xianzhiInverseFilterImageRestoration(degraimage,100)
+# result5 = (np.abs(result5) / np.abs(result5).max() * 255).astype(np.uint8)
+# cv2.imshow("r=100", result5)
 
-# filimg = np.fft.fft2(imgy)
-# degraimage = degradationImage(filimg)
-# addnoise = addnoisefreq(degraimage)
-# #
-# # cv2.imshow("degraimg", degraimage)
-# tuihua = np.fft.ifft2(addnoise)
-# tuihua = (np.abs(tuihua) / np.abs(tuihua).max() * 255).astype(np.uint8)
-# cv2.imshow("tuihua",tuihua)
-# # noiseimage = util.random_noise(degraimage,"gaussian")
-# # cv2.imshow("noiseimg",noiseimage)
-#
-# # 恢复图像
-# restorationimg = InverseFilterImageRestoration(degraimage)
-# restorationimg = np.fft.ifft2(restorationimg)
-# restorationimg = (np.abs(restorationimg) / np.abs(restorationimg).max() * 255).astype(np.uint8)
-# cv2.imshow("restorationimg", restorationimg)
 
 cv2.waitKey(0)
