@@ -27,27 +27,36 @@ def img_show_name(img):
 
 def rgbtransgray(img):
     height, width, channels = img.shape
-    img_gray = np.zeros((height, width))
+    img_gray = np.zeros((height, width),np.uint8)
     for r in range(height):
         for l in range(width):
             temp = (1 / 3 * img[r, l, 0] + 1 / 3 * img[r, l, 1] + 1 / 3 * img[r, l, 2])
             img_gray[r, l] = np.clip(temp, 0, 255)
     return img_gray
 
-namelist=[[0,0,0,0,0,0,0,0,0,0,0],
-          [0,1,0,1,1,1,0,1,1,1,0],
-          [0,1,0,0,0,1,0,0,0,1,0],
-          [0,1,0,1,1,1,0,1,1,1,0],
-          [0,1,0,1,0,0,0,0,0,1,0],
-          [0,1,0,1,1,1,0,1,1,1,0],
-          [0,0,0,0,0,0,0,0,0,0,0]]
-print(namelist[2][2],type(namelist))
-img=cv2.imread("images/csu.jpg")
-cv2.imshow("img",img)
-img_gray=rgbtransgray(img)
-cv2.imshow("img_gray",img_gray.astype("uint8"))
-img_addname=imgaddname(img_gray,namelist,10,20)
-cv2.imshow("img_addname",img_addname)
-img_showname=img_show_name(img_addname.astype("uint8"))
-cv2.imshow("img_showname",img_showname)
+def main():
+    namelist = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0],
+                [0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0],
+                [0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0],
+                [0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0],
+                [0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+    print(namelist[2][2], type(namelist))
+    img = cv2.imread("images/csu.jpg")
+    cv2.imshow("img", img)
+    img_gray = rgbtransgray(img)
+    cv2.imshow("img_gray", img_gray.astype("uint8"))
+    img_addname = imgaddname(img_gray, namelist, 10, 20)
+    cv2.imshow("img_addname", img_addname)
+    img_showname = img_show_name(img_addname.astype("uint8"))
+    cv2.imshow("img_showname", img_showname)
+    cv2.waitKey(0)
+    return 0
+
+img = cv2.imread("../images/yiqin.png")
+cv2.imshow("img", img)
+img_gray = rgbtransgray(img)
+cv2.imshow("imgy", img_gray)
+cv2.imwrite("../images/yiqin_gray.jpg",img_gray)
 cv2.waitKey(0)
