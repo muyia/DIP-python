@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d01a269-4951-40b8-a61e-a82ce71bf02a" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/color.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/yiqin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/yiqin_gray.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chapter6/colorImageProcess.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chapter6/pseudoColorImageProcessing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/lena.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chapter3/ImageAddName.py" afterPath="$PROJECT_DIR$/chapter3/ImageAddName.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chapter3/ImageHistogram.py" afterPath="$PROJECT_DIR$/chapter3/ImageHistogram.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chapter6/colocImgEdgeDetection.py" afterPath="$PROJECT_DIR$/chapter6/colocImgEdgeDetection.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,7 +22,9 @@
     <SUITE FILE_PATH="coverage/DIP$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1609580929793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chapter3" />
     <SUITE FILE_PATH="coverage/DIP$GrayLaplacian.coverage" NAME="GrayLaplacian Coverage Results" MODIFIED="1605098624446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chapter3" />
     <SUITE FILE_PATH="coverage/DIP_python$pseudoColorImageProcessing.coverage" NAME="pseudoColorImageProcessing Coverage Results" MODIFIED="1610904250739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chapter6" />
+    <SUITE FILE_PATH="coverage/DIP_python$colocImgEdgeDetection.coverage" NAME="colocImgEdgeDetection Coverage Results" MODIFIED="1611130141073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chapter6" />
     <SUITE FILE_PATH="coverage/DIP$InverseFilter.coverage" NAME="InverseFilter Coverage Results" MODIFIED="1609686643349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chapter5" />
+    <SUITE FILE_PATH="coverage/DIP_python$compressCodeImage.coverage" NAME="compressCodeImage Coverage Results" MODIFIED="1611155642357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chapter8" />
     <SUITE FILE_PATH="coverage/DIP$NearestNI.coverage" NAME="NearestNI Coverage Results" MODIFIED="1603465474141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.idea" />
     <SUITE FILE_PATH="coverage/DIP$ImageMatch.coverage" NAME="ImageMatch Coverage Results" MODIFIED="1605005567462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chapter3" />
     <SUITE FILE_PATH="coverage/DIP$ImageInterpolation.coverage" NAME="ImageInterpolation Coverage Results" MODIFIED="1603557684444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.idea" />
@@ -41,33 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter3/test1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InverseFilter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter5/InverseFilter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="e#47#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colorImageProcess.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="colorImageProcess.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chapter6/colorImageProcess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="55" column="28" lean-forward="false" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+            <state relative-caret-position="289">
+              <caret line="66" column="11" lean-forward="true" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
               <folding>
                 <element signature="e#47#57#0" expanded="true" />
                 <element signature="e#1362#1587#0" expanded="false" />
@@ -76,10 +53,56 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="colocImgEdgeDetection.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chapter6/colocImgEdgeDetection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="18" />
+              <folding>
+                <element signature="e#47#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compressCodeImage.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chapter8/compressCodeImage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+              <folding>
+                <element signature="e#780#1497#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageHistogram.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chapter3/ImageHistogram.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageMatch.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chapter3/ImageMatch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="pseudoColorImageProcessing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chapter6/pseudoColorImageProcessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="1050">
               <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
               <folding>
                 <element signature="e#46#56#0" expanded="true" />
@@ -91,8 +114,8 @@
       <file leaf-file-name="_multiarray_umath.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-1256367360/numpy/core/_multiarray_umath.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-697">
-              <caret line="7385" column="17" lean-forward="true" selection-start-line="7385" selection-start-column="17" selection-end-line="7385" selection-end-column="17" />
+            <state relative-caret-position="221550">
+              <caret line="7385" column="17" lean-forward="false" selection-start-line="7385" selection-start-column="17" selection-end-line="7385" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -101,7 +124,7 @@
       <file leaf-file-name="ImageAddName.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chapter3/ImageAddName.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="1770">
               <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="38" />
               <folding />
             </state>
@@ -111,38 +134,8 @@
       <file leaf-file-name="fromnumeric.py" pinned="false" current-in-tab="false">
         <entry file="file://E:/Program Files/Python38/Lib/site-packages/numpy/core/fromnumeric.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
+            <state relative-caret-position="2190">
               <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WienerFiltering.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter5/WienerFiltering.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="91" column="2" lean-forward="true" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GrayLaplacian.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter3/GrayLaplacian.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="45" column="52" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="threeTypicalFilter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chapter4/threeTypicalFilter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3570">
-              <caret line="120" column="37" lean-forward="false" selection-start-line="120" selection-start-column="37" selection-end-line="120" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -162,6 +155,7 @@
       <find>weight</find>
       <find>Weight</find>
       <find>imgeAverage</find>
+      <find>lapla</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,7 +168,6 @@
         <option value="$PROJECT_DIR$/.idea/Chapter 2/ImageAveraging.py" />
         <option value="$PROJECT_DIR$/.idea/ImageInterpolation.py" />
         <option value="$PROJECT_DIR$/chapter3/ImageMatch.py" />
-        <option value="$PROJECT_DIR$/chapter3/ImageHistogram.py" />
         <option value="$PROJECT_DIR$/.idea/Chapter 2/ImageAverage.py" />
         <option value="$PROJECT_DIR$/.idea/test.py" />
         <option value="$PROJECT_DIR$/chapter3/ImgTransformation.py" />
@@ -191,6 +184,9 @@
         <option value="$PROJECT_DIR$/chapter3/ImageAddName.py" />
         <option value="$PROJECT_DIR$/chapter6/pseudoColorImageProcessing.py" />
         <option value="$PROJECT_DIR$/chapter6/colorImageProcess.py" />
+        <option value="$PROJECT_DIR$/chapter6/colocImgEdgeDetection.py" />
+        <option value="$PROJECT_DIR$/chapter3/ImageHistogram.py" />
+        <option value="$PROJECT_DIR$/chapter8/compressCodeImage.py" />
       </list>
     </option>
   </component>
@@ -222,8 +218,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -244,12 +238,19 @@
             <path>
               <item name="DIP-python" type="b2602c69:ProjectViewProjectNode" />
               <item name="DIP-python" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter8" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DIP-python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DIP-python" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,14 +260,14 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\PycharmProjects\DIP" />
-      <recent name="D:\PycharmProjects\DIP\chapter3\images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PycharmProjects\DIP-python\images" />
       <recent name="D:\PycharmProjects\DIP\chapter3\images" />
       <recent name="D:\PycharmProjects\DIP\chapter3" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PycharmProjects\DIP" />
+      <recent name="D:\PycharmProjects\DIP\chapter3\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -281,7 +282,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pseudoColorImageProcessing">
+  <component name="RunManager" selected="Python.compressCodeImage">
     <configuration name="ImageAddName" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -300,20 +301,20 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="InverseFilter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="colocImgEdgeDetection" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chapter5" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chapter6" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DIP" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chapter5/InverseFilter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chapter6/colocImgEdgeDetection.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -336,6 +337,24 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="compressCodeImage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chapter8" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DIP" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chapter8/compressCodeImage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="pseudoColorImageProcessing" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -354,38 +373,20 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="threeTypicalFilter" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chapter4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DIP" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chapter4/threeTypicalFilter.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.InverseFilter" />
-      <item index="1" class="java.lang.String" itemvalue="Python.threeTypicalFilter" />
-      <item index="2" class="java.lang.String" itemvalue="Python.colorImageProcess" />
-      <item index="3" class="java.lang.String" itemvalue="Python.ImageAddName" />
-      <item index="4" class="java.lang.String" itemvalue="Python.pseudoColorImageProcessing" />
+      <item index="0" class="java.lang.String" itemvalue="Python.colorImageProcess" />
+      <item index="1" class="java.lang.String" itemvalue="Python.ImageAddName" />
+      <item index="2" class="java.lang.String" itemvalue="Python.pseudoColorImageProcessing" />
+      <item index="3" class="java.lang.String" itemvalue="Python.colocImgEdgeDetection" />
+      <item index="4" class="java.lang.String" itemvalue="Python.compressCodeImage" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.pseudoColorImageProcessing" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ImageAddName" />
-        <item index="2" class="java.lang.String" itemvalue="Python.colorImageProcess" />
-        <item index="3" class="java.lang.String" itemvalue="Python.InverseFilter" />
-        <item index="4" class="java.lang.String" itemvalue="Python.threeTypicalFilter" />
+        <item index="0" class="java.lang.String" itemvalue="Python.compressCodeImage" />
+        <item index="1" class="java.lang.String" itemvalue="Python.colocImgEdgeDetection" />
+        <item index="2" class="java.lang.String" itemvalue="Python.pseudoColorImageProcessing" />
+        <item index="3" class="java.lang.String" itemvalue="Python.ImageAddName" />
+        <item index="4" class="java.lang.String" itemvalue="Python.colorImageProcess" />
       </list>
     </recent_temporary>
   </component>
@@ -400,12 +401,27 @@
       <option name="presentableId" value="Default" />
       <updated>1603444861569</updated>
     </task>
+    <task id="LOCAL-00001" summary="新更新">
+      <created>1610906588192</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610906588192</updated>
+    </task>
+    <task id="LOCAL-00002" summary="新更新">
+      <created>1611204368924</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611204368924</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16111952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1633888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -414,7 +430,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22818792" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27348992" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -435,6 +451,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="新更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="新更新" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="12" />
@@ -442,9 +462,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/Chapter 2/ImageAveraging.py" />
-    <entry file="file://$PROJECT_DIR$/.idea/Chapter 2/ImageAverage.py" />
-    <entry file="file://$PROJECT_DIR$/.idea/ImageInterpolation.py" />
     <entry file="file://E:/Program Files/Python38/Lib/site-packages/matplotlib/image.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -502,13 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chapter3/ImageMatch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/fil1.PNG">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -517,13 +527,6 @@
     <entry file="file://$PROJECT_DIR$/images/fil2.PNG">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter3/ImageHistogram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="31" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/images/fil3.PNG">
@@ -578,7 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -593,7 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3930">
           <caret line="132" column="45" lean-forward="false" selection-start-line="131" selection-start-column="16" selection-end-line="132" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -601,7 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52650">
           <caret line="1759" column="4" lean-forward="false" selection-start-line="1759" selection-start-column="4" selection-end-line="1759" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -614,7 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25770">
           <caret line="859" column="27" lean-forward="false" selection-start-line="859" selection-start-column="27" selection-end-line="859" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -622,7 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3360">
           <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -630,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -652,7 +649,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chapter3/test1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="90">
           <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
           <folding />
         </state>
@@ -660,17 +657,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chapter5/InverseFilter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="240">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#47#57#0" expanded="true" />
+            <element signature="e#47#57#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chapter5/WienerFiltering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="2700">
           <caret line="91" column="2" lean-forward="true" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="61" />
           <folding />
         </state>
@@ -678,7 +675,7 @@
     </entry>
     <entry file="file://E:/Program Files/Python38/Lib/site-packages/numpy/core/fromnumeric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
+        <state relative-caret-position="2190">
           <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding />
         </state>
@@ -691,7 +688,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chapter3/ImageAddName.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
+        <state relative-caret-position="1770">
           <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="38" />
           <folding />
         </state>
@@ -699,15 +696,15 @@
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-1256367360/numpy/core/_multiarray_umath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-697">
-          <caret line="7385" column="17" lean-forward="true" selection-start-line="7385" selection-start-column="17" selection-end-line="7385" selection-end-column="17" />
+        <state relative-caret-position="221550">
+          <caret line="7385" column="17" lean-forward="false" selection-start-line="7385" selection-start-column="17" selection-end-line="7385" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chapter6/pseudoColorImageProcessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="1050">
           <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
           <folding>
             <element signature="e#46#56#0" expanded="true" />
@@ -715,13 +712,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3/ImageMatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter3/ImageHistogram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-1256367360/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="764">
+          <caret line="2941" column="8" lean-forward="false" selection-start-line="2941" selection-start-column="8" selection-end-line="2941" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter6/colocImgEdgeDetection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="18" />
+          <folding>
+            <element signature="e#47#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chapter6/colorImageProcess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="55" column="28" lean-forward="false" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+        <state relative-caret-position="289">
+          <caret line="66" column="11" lean-forward="true" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
           <folding>
             <element signature="e#47#57#0" expanded="true" />
             <element signature="e#1362#1587#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter8/compressCodeImage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding>
+            <element signature="e#780#1497#0" expanded="false" />
           </folding>
         </state>
       </provider>
